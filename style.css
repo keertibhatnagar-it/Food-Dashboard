@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color:gray;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.brand,.heading{
+    font-family: 'Abril Fatface', cursive;
+    margin:2rem 1rem 2rem 1rem;
+    color: rgb(61, 57, 57);
+}
+.brand{
+    font-size: 2.5rem;
+}
+.container{
+    display:flex;
+}
+.sidebar{
+    flex:1;
+    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    margin:2rem 1rem 2rem 1;
+}
+.menu-item{
+    margin:2rem 1rem 2rem 1rem;
+}
+#about{
+    text-decoration-color:#FF4E4E;
+}
+.menu-item:hover{
+    color:#FF4E4E;
+}
+.cart{
+    margin:3rem 1rem 2rem 1rem;
+    background-color:#FF4E4E;
+    padding:1rem;
+    width:6rem;
+    border-radius:2rem;
+    color:white;
+    text-align: center;
+}
+.cart:hover{
+    color:black;
+}
+.main-content{
+    flex:8;
+    width:80%;
+}
+.content{
+    display: flex;
+    margin-top:8rem;
+}
+.heading{
+    font-size: 4.5rem;
+    width:60%;
+}
+.text{
+    width:20%;
+    line-height:1.8rem;
+    margin:2rem 1rem 2rem 1rem;
+}
+.underline{
+    border-bottom: 3px solid #FF4E4E;
+    width:30%;
+    margin-top:1rem;
+}
+.products{
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+}
+.product-card{
+    display:flex;
+    margin:5rem 1.5rem 2rem 1rem;
+    width: 11.2rem;
+    height:14rem;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom:2rem;
+    box-shadow: 12px 12px 25px 0 rgb(212, 209, 209);
+}
+.circle{
+    width:6rem;
+    height:6rem;
+    margin:auto;
+    border-radius: 50%;
+    object-fit: fill;
+    background-position: center;
+    transition: all 0.3s;
+}
+#mexican-taco{
+    background-image: url("./images/MexicanTaco.png");
+}
+#farmhouse-pizza{
+    background-image: url("./images/FarmhousePizza.png");
+}
+#chicken-burger{
+    background-image: url("./images/ChickenBurger.png");
+}
+#loaded-nachos{
+    background-image: url("./images/LoadedNachos.png");
+}
+#hakka-noodles{
+    background-image: url("./images/HakkaNoodles.png");
+}
+.dish-name{
+    text-align: center;
+    font-weight: bolder;
+    color:black;
+}
+.bar1, .bar2, .bar3{
+    height: 3px;
+    background-color:#FF4E4E;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.bar1{
+    width: 20px;
+}
+.bar2{
+    width: 30px;
+}
+.bar3{
+    width: 25px;
+}
+nav{
+    display:none;
+}
+.brand-media{
+    font-family: 'Abril Fatface', cursive;
+    color:black;
+}
+.text-media{
+    display:none;
+}
+.material-icons{
+    color:#FF4E4E;
+    font-size: 2rem;
+}
+@media only screen and (max-width:900px){
+    .p5{
+        display: none;
+    }
+    .sidebar{
+        position: absolute;
+        background-color: #FF4E4E;
+        transition: ease 0.4s;
+        left: -100%;
+    }
+    .show-sidebar{
+        left:0%;
+    }
+    ul li{
+        color:white;
+    }
+    .menu-item:hover{
+        color:black;
+    }
+    #about{
+        text-decoration-color:white;
+        color:white;
+    }
+    .cart{
+        display: none;
+    }
+    .content{
+        margin:0 1rem 0 1rem;
+    }
+    nav{
+        margin: 1rem;
+        height:3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .text{
+        display:none;
+    }
+    .text-media{
+        display:block;
+        width:80%;
+        font-size: larger;
+        line-height:1.8rem;
+        margin:2rem 1rem 2rem 1rem;
+    }
+    .heading{
+        margin:0;
+        font-size:3rem;
+        width: 100%;
+    }  
+}
+@media only screen and (max-width:450px){
+    .products{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .product-card{
+        width: 9rem;
+        height:10rem;
+    }
+    .circle{
+        justify-self:center;
+        width:5.5rem;
+        height:5.5rem;
+    }
+    .dish-name{
+        font-size:smaller;
+    }
+}
+@media only screen and (min-width:1200px){
+    .circle{
+        width:8rem;
+        height:8rem;
+    }
+}
+
